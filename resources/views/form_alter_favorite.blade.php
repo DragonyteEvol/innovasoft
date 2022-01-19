@@ -50,12 +50,12 @@
 	@endforeach
 </div>
 	<br>
-	<input type="submit" value="Enviar">
+	<input class="btn" type="submit" value="Enviar">
 </form>
 
 <form method="POST" action="{{route('dropFavorite',$data['id'])}}">
 	@method('DELETE')
 	{{csrf_field()}}
-	<input type="submit" value="Borrar">
+	<input type="submit" class="btn" value="Borrar">
 </form>
 @endsection
