@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/', 'RootController@root');
+Route::get('/', 'App\Http\Controllers\RootController@root');
 
 Auth::routes();
 
@@ -24,28 +24,28 @@ Route::group(['middleware'=>'auth'],function(){
 
 	/* Favorite */
 
-	Route::get('/create/favorite','FavoriteController@showFormCrateFavorite')->name('createFavorite');
+	Route::get('/create/favorite','App\Http\Controllers\FavoriteController@showFormCrateFavorite')->name('createFavorite');
 
-	Route::post('/insert/favorite','FavoriteController@insertFavorite')->name('insertFavorite');
+	Route::post('/insert/favorite','App\Http\Controllers\FavoriteController@insertFavorite')->name('insertFavorite');
 
-	Route::get('/alter/favorite/{id}','FavoriteController@showFormAlterFavorite')->name('alterFavorite');
+	Route::get('/alter/favorite/{id}','App\Http\Controllers\FavoriteController@showFormAlterFavorite')->name('alterFavorite');
 
-	Route::put('/update/favorite/{id}','FavoriteController@editFavorite')->name('editFavorite');
+	Route::put('/update/favorite/{id}','App\Http\Controllers\FavoriteController@editFavorite')->name('editFavorite');
 
-	Route::delete('/drop/favorite/{id}','FavoriteController@dropFavorite')->name('dropFavorite');
+	Route::delete('/drop/favorite/{id}','App\Http\Controllers\FavoriteController@dropFavorite')->name('dropFavorite');
 
 
 	/* Categorie */
 
-	Route::get('/create/categorie','CategorieController@showFormCreateCategorie')->name('createCategorie');
+	Route::get('/create/categorie','App\Http\Controllers\CategorieController@showFormCreateCategorie')->name('createCategorie');
 
-	Route::post('/insert/categorie','CategorieController@insertCategorie')->name('insertCategorie');
+	Route::post('/insert/categorie','App\Http\Controllers\CategorieController@insertCategorie')->name('insertCategorie');
 
-	Route::get('/alter/categorie/{id}','CategorieController@showFormAlterCategorie')->name('alterCategorie');
+	Route::get('/alter/categorie/{id}','App\Http\Controllers\CategorieController@showFormAlterCategorie')->name('alterCategorie');
 
-	Route::put('/update/categorie/{id}','CategorieController@editCategorie')->name('editCategorie');
+	Route::put('/update/categorie/{id}','App\Http\Controllers\CategorieController@editCategorie')->name('editCategorie');
 
-	Route::delete('/drop/categorie/{id}','CategorieController@dropCategorie')->name('dropCategorie');
+	Route::delete('/drop/categorie/{id}','App\Http\Controllers\CategorieController@dropCategorie')->name('dropCategorie');
 
 
 
